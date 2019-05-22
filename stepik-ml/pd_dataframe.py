@@ -3,19 +3,11 @@ import numpy as np
 
 students_performance = pd.read_csv('http://stepik.org/media/attachments/course/4852/StudentsPerformance.csv')
 
-
 students_performance
-
-
 students_performance.head()
-
 students_performance.head(10)
-
-
 students_performance.tail()
-
 students_performance.tail(10)
-
 students_performance.describe()
 
 
