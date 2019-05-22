@@ -29,7 +29,6 @@ chapters = little_woman_text.split('CHAPTER ')[1:]
 Table().with_column('Text', chapters)
 
 np.char.count(chapters, 'Christmas')
-
 #np.char.count(chapters, 'Jo')
 
 Table().with_columns(        
@@ -53,7 +52,6 @@ Table().with_columns(
         'Laurie', np.char.count(chapters, 'Laurie')
         ).cumsum().plot()
 
-
 ##
 ##
 ##
@@ -64,5 +62,3 @@ Table().with_columns([
         'Number of periods', np.char.count(chapters, '.'), 
       
       ]).scatter('Number of periods')
-    
-    

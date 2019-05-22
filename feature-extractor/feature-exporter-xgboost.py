@@ -8,12 +8,10 @@ Created on Sat May 18 21:09:19 2019
 
 import numpy as np
 import pandas as pd
-
-from sklearn.linear_model import SGDClassifier
-from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
 from xgboost import XGBClassifier
 
 my_data = pd.read_csv('out.csv')
@@ -26,7 +24,6 @@ counts.sort_values(by='value')
 
 tfidf_transformer = TfidfTransformer()
 count_vect = CountVectorizer()
-
 
 text_clf_svm = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
