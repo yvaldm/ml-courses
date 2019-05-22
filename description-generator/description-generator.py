@@ -5,6 +5,8 @@
 Implement here LSTM to generate descriptions for new product by it's attribute names and values
 Learn on existing corpus of descriptions
 
+TODO
+
 @author: valery.yakovlev
 """
 
