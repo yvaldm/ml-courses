@@ -6,8 +6,8 @@ Created on Wed Apr 10 22:13:11 2019
 @author: valery.yakovlev
 """
 
-from datascience import *
 import numpy as np
+from datascience import *
 
 %matplotlib inline
 
@@ -57,8 +57,6 @@ Table().with_columns(
 ##
 
 Table().with_columns([
-      
         'Chapter Length', [len(c) for c in chapters],
         'Number of periods', np.char.count(chapters, '.'), 
-      
       ]).scatter('Number of periods')

@@ -6,14 +6,15 @@ Created on Sat May 18 21:09:19 2019
 @author: valery.yakovlev
 """
 
+import pickle
+
 import numpy as np
 import pandas as pd
-
-from sklearn.linear_model import SGDClassifier
-from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
 
 my_data = pd.read_csv('out.csv')
 
@@ -38,7 +39,13 @@ y = renamed_df['key']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
 
+print('training')
 text_clf_svm = text_clf_svm.fit(X_train, y_train)
+print('training finished')
+
+print('dumping trained model to file')
+pickle.dump(text_clf_svm, open('sgd_attribute_extraction.model', 'wb'))
+
 predicted_svm = text_clf_svm.predict(X_test)
 np.mean(predicted_svm == y_test)
 

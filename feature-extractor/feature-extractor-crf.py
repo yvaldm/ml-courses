@@ -1,16 +1,4 @@
-from itertools import chain
-
 import nltk
-import sklearn
-import sklearn_crfsuite
-import eli5
-import scipy.stats
-from sklearn.metrics import make_scorer
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import RandomizedSearchCV
-
-from sklearn_crfsuite import scorers
-from sklearn_crfsuite import metrics
 
 nltk.download('conll2002')
 aa = nltk.corpus.conll2002.fileids()
@@ -71,5 +59,3 @@ y_train = [sent2labels(s) for s in train_sents]
 
 X_test = [sent2features(s) for s in test_sents]
 y_test = [sent2labels(s) for s in test_sents]
-
-
