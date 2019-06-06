@@ -1,0 +1,32 @@
+Å´transitions⁄í[
+  {
+    "clas":0,
+    "move":1,
+    "label":"PrdName",
+    "name":"B-PrdName"
+  },
+  {
+    "clas":1,
+    "move":2,
+    "label":"PrdName",
+    "name":"I-PrdName"
+  },
+  {
+    "clas":2,
+    "move":3,
+    "label":"PrdName",
+    "name":"L-PrdName"
+  },
+  {
+    "clas":3,
+    "move":4,
+    "label":"PrdName",
+    "name":"U-PrdName"
+  },
+  {
+    "clas":4,
+    "move":5,
+    "label":"",
+    "name":"O"
+  }
+]
